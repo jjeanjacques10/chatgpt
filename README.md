@@ -1,14 +1,14 @@
 # Java Client for the ChatGPT
 
 <p align="center">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jjeanjacques10/chatgpt-java-client?color=FFCC00">
-  <a href="https://github.com/jjeanjacques10/chatgpt-java-client/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jjeanjacques10/chatgpt-java-client?color=FFCC00">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jjeanjacques10/chatgpt?color=FFCC00">
+  <a href="https://github.com/jjeanjacques10/chatgpt/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jjeanjacques10/chatgpt?color=FFCC00">
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-FFCC00">
-  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/jjeanjacques10/chatgpt-java-client?color=FFCC00" />
-  <a href="https://github.com/jjeanjacques10/chatgpt-java-client/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/jjeanjacques10/chatgpt-java-client?color=FFCC00&logo=github">
+  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/jjeanjacques10/chatgpt?color=FFCC00" />
+  <a href="https://github.com/jjeanjacques10/chatgpt/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/jjeanjacques10/chatgpt?color=FFCC00&logo=github">
   </a>
 </p>
 
