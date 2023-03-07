@@ -5,9 +5,9 @@ import java.util.List;
 public class ChatRequest {
     private String model;
 
-    private List<MessageResquest> messages;
+    private List<com.jjeanjacques.gateway.rest.datacontract.MessageResquest> messages;
 
-    public ChatRequest(String model, List<MessageResquest> messages) {
+    public ChatRequest(String model, List<com.jjeanjacques.gateway.rest.datacontract.MessageResquest> messages) {
         this.model = model;
         this.messages = messages;
     }
@@ -20,11 +20,11 @@ public class ChatRequest {
         this.model = model;
     }
 
-    public List<MessageResquest> getMessages() {
+    public List<com.jjeanjacques.gateway.rest.datacontract.MessageResquest> getMessages() {
         return messages;
     }
 
-    public void setMessages(List<MessageResquest> messages) {
+    public void setMessages(List<com.jjeanjacques.gateway.rest.datacontract.MessageResquest> messages) {
         this.messages = messages;
     }
 }

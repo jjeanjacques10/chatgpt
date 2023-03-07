@@ -3,7 +3,7 @@ package com.jjeanjacques.gateway.rest.datacontract;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Choice {
-    private Message message;
+    private com.jjeanjacques.gateway.rest.datacontract.Message message;
     @JsonProperty("finish_reason")
     private String finishReason;
     private int index;
@@ -11,17 +11,17 @@ public class Choice {
     public Choice() {
     }
 
-    public Choice(Message message, String finishReason, int index) {
+    public Choice(com.jjeanjacques.gateway.rest.datacontract.Message message, String finishReason, int index) {
         this.message = message;
         this.finishReason = finishReason;
         this.index = index;
     }
 
-    public Message getMessage() {
+    public com.jjeanjacques.gateway.rest.datacontract.Message getMessage() {
         return message;
     }
 
-    public void setMessage(Message message) {
+    public void setMessage(com.jjeanjacques.gateway.rest.datacontract.Message message) {
         this.message = message;
     }
 
