@@ -12,14 +12,14 @@ import com.jjeanjacques.gateway.rest.datacontract.Choice;
  * @author <a href="https://github.com/jjeanjacques10">Jean Jacques Barros</a>
  * @since 2023/3/2
  */
-public class ChatGPT {
+public class ChatGpt {
     protected ChatGptClient client;
 
-    public ChatGPT(String apiKey) {
+    public ChatGpt(String apiKey) {
         this.client = new ChatGptClient(apiKey);
     }
 
-    public ChatGPT(ChatGptClient client) {
+    public ChatGpt(ChatGptClient client) {
         this.client = client;
     }
 

@@ -18,11 +18,11 @@ pom.xml file:
 
 ## Usage
 
-To use the Java client for the ChatGPT, you need to create an instance of the `ChatGPT` class and provide your
+To use the Java client for the ChatGPT, you need to create an instance of the `ChatGpt` class and provide your
 ChatGPT API Key (https://platform.openai.com/account/api-keys):
 
 ``` java
-ChatGPT chatGPT = new ChatGPT("<your_api_key>");
+ChatGpt chatGPT = new ChatGpt("<your_api_key>");
 ```
 
 ## Support

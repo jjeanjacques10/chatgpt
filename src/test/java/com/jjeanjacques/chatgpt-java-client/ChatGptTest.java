@@ -19,7 +19,7 @@ public class ChatGptTest {
 
     @Test
     public void chatTest() {
-        com.jjeanjacques.ChatGPT chatGPT = new com.jjeanjacques.ChatGPT(client);
+        com.jjeanjacques.ChatGpt chatGPT = new com.jjeanjacques.ChatGpt(client);
 
         when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
 
@@ -30,7 +30,7 @@ public class ChatGptTest {
 
     @Test
     public void chatMessageTest() {
-        com.jjeanjacques.ChatGPT chatGPT = new com.jjeanjacques.ChatGPT(client);
+        com.jjeanjacques.ChatGpt chatGPT = new com.jjeanjacques.ChatGpt(client);
 
         when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
 
