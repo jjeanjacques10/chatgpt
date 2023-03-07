@@ -1,6 +1,7 @@
 package com.jjeanjacques.gateway.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jjeanjacques.enums.Model;
 import com.jjeanjacques.gateway.rest.datacontract.ChatGptResponse;
 import com.jjeanjacques.gateway.rest.datacontract.ChatRequest;
 import com.jjeanjacques.gateway.rest.datacontract.MessageResquest;
@@ -11,7 +12,6 @@ import java.util.List;
 
 public class ChatGptClient {
     private final String URL = "https://api.openai.com/v1/chat/completions";
-    private final String MODEL_GPT = "gpt-3.5-turbo";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private String apiKey;
@@ -24,7 +24,7 @@ public class ChatGptClient {
         OkHttpClient client = new OkHttpClient();
 
         ChatRequest requestBody = new ChatRequest(
-                MODEL_GPT,
+                Model.GPT_3_5_TURBO.getValue(),
                 List.of(new MessageResquest("user", input))
         );
         try {
