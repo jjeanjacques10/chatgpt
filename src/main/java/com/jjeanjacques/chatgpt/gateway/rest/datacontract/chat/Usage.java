@@ -1,4 +1,4 @@
-package com.jjeanjacques.gateway.rest.datacontract;
+package com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

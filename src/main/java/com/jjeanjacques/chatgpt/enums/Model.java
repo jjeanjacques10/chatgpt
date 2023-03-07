@@ -1,4 +1,4 @@
-package com.jjeanjacques.enums;
+package com.jjeanjacques.chatgpt.enums;
 
 public enum Model {
 

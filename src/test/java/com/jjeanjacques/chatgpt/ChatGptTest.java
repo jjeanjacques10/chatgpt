@@ -1,25 +1,25 @@
-package com.jjeanjacques;
+package com.jjeanjacques.chatgpt;
 
-import com.jjeanjacques.gateway.rest.ChatGptClient;
-import com.jjeanjacques.gateway.rest.datacontract.ChatGptResponse;
+import com.jjeanjacques.chatgpt.gateway.rest.ChatClient;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatGptResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static com.jjeanjacques.fixture.chatGptResponseFixture.getChatGptResponse;
+import static com.jjeanjacques.chatgpt.fixture.chatGptResponseFixture.getChatGptResponse;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ChatGptTest {
 
     @Mock
-    private ChatGptClient client;
+    private ChatClient client;
 
     @Test
     public void chatTest() {
-        com.jjeanjacques.ChatGpt chatGPT = new com.jjeanjacques.ChatGpt(client);
+        ChatGpt chatGPT = new ChatGpt(client, null);
 
         when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
 
@@ -30,7 +30,7 @@ public class ChatGptTest {
 
     @Test
     public void chatMessageTest() {
-        com.jjeanjacques.ChatGpt chatGPT = new com.jjeanjacques.ChatGpt(client);
+        ChatGpt chatGPT = new ChatGpt(client, null);
 
         when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
 

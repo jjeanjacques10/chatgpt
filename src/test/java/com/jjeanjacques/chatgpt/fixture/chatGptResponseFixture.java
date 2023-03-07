@@ -1,9 +1,9 @@
-package com.jjeanjacques.fixture;
+package com.jjeanjacques.chatgpt.fixture;
 
-import com.jjeanjacques.gateway.rest.datacontract.ChatGptResponse;
-import com.jjeanjacques.gateway.rest.datacontract.Choice;
-import com.jjeanjacques.gateway.rest.datacontract.Message;
-import com.jjeanjacques.gateway.rest.datacontract.Usage;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatGptResponse;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.Choice;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.Message;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.Usage;
 
 import java.util.List;
 

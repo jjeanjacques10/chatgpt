@@ -1,22 +1,22 @@
-package com.jjeanjacques.gateway.rest;
+package com.jjeanjacques.chatgpt.gateway.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jjeanjacques.enums.Model;
-import com.jjeanjacques.gateway.rest.datacontract.ChatGptResponse;
-import com.jjeanjacques.gateway.rest.datacontract.ChatRequest;
-import com.jjeanjacques.gateway.rest.datacontract.MessageResquest;
+import com.jjeanjacques.chatgpt.enums.Model;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatGptResponse;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatRequest;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.MessageResquest;
 import okhttp3.*;
 
 import java.io.IOException;
 import java.util.List;
 
-public class ChatGptClient {
+public class ChatClient {
     private final String URL = "https://api.openai.com/v1/chat/completions";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private String apiKey;
 
-    public ChatGptClient(String apiKey) {
+    public ChatClient(String apiKey) {
         this.apiKey = apiKey;
     }
 

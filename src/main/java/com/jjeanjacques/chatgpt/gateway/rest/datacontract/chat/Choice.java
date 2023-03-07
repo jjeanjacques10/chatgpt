@@ -1,9 +1,9 @@
-package com.jjeanjacques.gateway.rest.datacontract;
+package com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Choice {
-    private com.jjeanjacques.gateway.rest.datacontract.Message message;
+    private Message message;
     @JsonProperty("finish_reason")
     private String finishReason;
     private int index;
@@ -11,17 +11,17 @@ public class Choice {
     public Choice() {
     }
 
-    public Choice(com.jjeanjacques.gateway.rest.datacontract.Message message, String finishReason, int index) {
+    public Choice(Message message, String finishReason, int index) {
         this.message = message;
         this.finishReason = finishReason;
         this.index = index;
     }
 
-    public com.jjeanjacques.gateway.rest.datacontract.Message getMessage() {
+    public Message getMessage() {
         return message;
     }
 
-    public void setMessage(com.jjeanjacques.gateway.rest.datacontract.Message message) {
+    public void setMessage(Message message) {
         this.message = message;
     }
 

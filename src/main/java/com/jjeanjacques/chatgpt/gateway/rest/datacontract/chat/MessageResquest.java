@@ -1,4 +1,4 @@
-package com.jjeanjacques.gateway.rest.datacontract;
+package com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat;
 
 public class MessageResquest {
     private String role;
