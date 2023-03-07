@@ -5,16 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jjeanjacques</groupId>
-    <artifactId>chatgpt-java-client</artifactId>
+    <artifactId>chatgpt</artifactId>
     <version>1.0.0</version>
     <description>Java client for the ChatGPT</description>
 
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://raw.githubusercontent.com/jjeanjacques10/chatgpt-java-client/main/LICENSE</url>
+            <url>https://raw.githubusercontent.com/jjeanjacques10/chatgpt/main/LICENSE</url>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <id>jjeanjacques10</id>
+            <name>Jean Jacques Barros</name>
+            <email>jjean.jacques10@gmail.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
