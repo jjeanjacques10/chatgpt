@@ -10,7 +10,7 @@ import java.util.List;
 public class chatGptResponseFixture {
     public static ChatGptResponse getChatGptResponse() {
         return new ChatGptResponse(
-                "",
+                "123",
                 "",
                 10,
                 "",

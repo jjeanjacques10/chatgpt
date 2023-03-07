@@ -23,8 +23,18 @@ public class ChatGptTest {
 
         when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
 
-        String response = chatGPT.chat("Hello, World!");
-        Assert.assertTrue(response.length() > 0);
+        ChatGptResponse response = chatGPT.chat("Hello, World!");
+        Assert.assertEquals("123", response.getId());
+        Assert.assertEquals("Hello!", response.getChoices().get(0).getMessage().getContent());
+    }
+
+    @Test
+    public void chatMessageTest() {
+        ChatGPT chatGPT = new ChatGPT(client);
+
+        when(client.chat("Hello, World!")).thenReturn(getChatGptResponse());
+
+        String response = chatGPT.chatMessage("Hello, World!");
         Assert.assertEquals(response, "Hello!");
     }
 }

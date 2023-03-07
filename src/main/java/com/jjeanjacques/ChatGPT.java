@@ -23,7 +23,12 @@ public class ChatGPT {
         this.client = client;
     }
 
-    public String chat(String input) {
+    public ChatGptResponse chat(String input) {
+        ChatGptResponse chatResponse = this.client.chat(input);
+        return chatResponse;
+    }
+
+    public String chatMessage(String input) {
         ChatGptResponse chatResponse = this.client.chat(input);
         Choice choice = chatResponse.getChoices().stream().findFirst().get();
         return choice.getMessage().getContent();
