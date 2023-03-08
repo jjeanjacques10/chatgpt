@@ -1,32 +1,17 @@
 package com.jjeanjacques.chatgpt.gateway.rest.datacontract.image;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ImageResponse {
     private long created;
     private List<DataImage> data;
-
-    public ImageResponse() {
-    }
-
-    public ImageResponse(long created, List<DataImage> data) {
-        this.created = created;
-        this.data = data;
-    }
-
-    public long getCreated() {
-        return created;
-    }
-
-    public void setCreated(long created) {
-        this.created = created;
-    }
-
-    public List<DataImage> getData() {
-        return data;
-    }
-
-    public void setData(List<DataImage> data) {
-        this.data = data;
-    }
 }

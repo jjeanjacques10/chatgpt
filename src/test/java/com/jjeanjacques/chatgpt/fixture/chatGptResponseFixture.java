@@ -9,12 +9,11 @@ import java.util.List;
 
 public class chatGptResponseFixture {
     public static ChatGptResponse getChatGptResponse() {
-        return new ChatGptResponse(
-                "123",
-                "",
-                10,
-                "",
-                new Usage(1, 1, 1),
-                List.of(new Choice(new Message("user", "Hello!"), "", 0)));
+        return ChatGptResponse.builder()
+                .id("123")
+                .model("")
+                .usage(Usage.builder().promptTokens(1).completionTokens(1).totalTokens(1).build())
+                .choices(List.of(new Choice(new Message("user", "Hello!"), "", 0)))
+                .build();
     }
 }

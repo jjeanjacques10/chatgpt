@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class ChatClient {
-    private final String URL = "https://api.openai.com/v1/chat/completions";
+    private static final String URL = "https://api.openai.com/v1/chat/completions";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private String apiKey;
@@ -23,10 +23,9 @@ public class ChatClient {
     public ChatGptResponse chat(String input) {
         OkHttpClient client = new OkHttpClient();
 
-        ChatRequest requestBody = new ChatRequest(
-                Model.GPT_3_5_TURBO.getValue(),
-                List.of(new MessageResquest("user", input))
-        );
+        ChatRequest requestBody = ChatRequest.builder()
+                .model(Model.GPT_3_5_TURBO.getValue())
+                .messages(List.of(new MessageResquest("user", input))).build();
         try {
             RequestBody body = RequestBody.create(objectMapper.writeValueAsString(requestBody), MediaType.get("application/json; charset=utf-8"));
             Request request = new Request.Builder()
