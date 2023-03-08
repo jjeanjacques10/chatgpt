@@ -5,6 +5,7 @@ import com.jjeanjacques.chatgpt.gateway.rest.ImageClient;
 import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatGptResponse;
 import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.Choice;
 import com.jjeanjacques.chatgpt.gateway.rest.datacontract.image.DataImage;
+import com.jjeanjacques.chatgpt.gateway.rest.datacontract.image.ImageResponse;
 
 import java.util.List;
 
@@ -42,7 +43,7 @@ public class ChatGpt {
     }
 
     public List<DataImage> image(String input) {
-        var imageResponse = this.imageClient.getImage(input);
+        ImageResponse imageResponse = this.imageClient.getImage(input);
         return imageResponse.getData();
     }
 
