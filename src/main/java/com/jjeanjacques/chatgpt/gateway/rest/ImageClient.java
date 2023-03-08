@@ -1,15 +1,11 @@
 package com.jjeanjacques.chatgpt.gateway.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jjeanjacques.chatgpt.enums.Model;
-import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.ChatRequest;
-import com.jjeanjacques.chatgpt.gateway.rest.datacontract.chat.MessageResquest;
 import com.jjeanjacques.chatgpt.gateway.rest.datacontract.image.ImageRequest;
 import com.jjeanjacques.chatgpt.gateway.rest.datacontract.image.ImageResponse;
 import okhttp3.*;
 
 import java.io.IOException;
-import java.util.List;
 
 public class ImageClient {
     private final String URL = "https://api.openai.com/v1/images/generations";
@@ -25,11 +21,10 @@ public class ImageClient {
     public ImageResponse getImage(String input) {
         OkHttpClient client = new OkHttpClient();
 
-        ImageRequest requestBody = new ImageRequest(
-                input,
-                2,
-                DEFAULT_IMAGE_SIZE
-        );
+        ImageRequest requestBody = ImageRequest.builder()
+                .prompt(input)
+                .n(2)
+                .size(DEFAULT_IMAGE_SIZE).build();
         try {
             RequestBody body = RequestBody.create(objectMapper.writeValueAsString(requestBody), MediaType.get("application/json; charset=utf-8"));
             Request request = new Request.Builder()

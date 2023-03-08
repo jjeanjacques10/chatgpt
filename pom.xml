@@ -6,7 +6,7 @@
 
     <groupId>com.jjeanjacques</groupId>
     <artifactId>chatgpt</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>chatgpt</name>
     <description>Java client for the ChatGPT</description>
     <url>https://github.com/jjeanjacques10/chatgpt</url>
@@ -57,6 +57,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.13.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
         </dependency>
     </dependencies>
 
