@@ -36,6 +36,7 @@
     </properties>
 
     <dependencies>
+        <!-- Test -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -48,11 +49,20 @@
             <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Http -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.10.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!-- Others -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
