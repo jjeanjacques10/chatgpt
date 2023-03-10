@@ -30,7 +30,7 @@ pom.xml file:
 
 ## Configuration
 
-1. Set the property `chatgpt.api.key` in your `application.properties` file:
+1. Set the property `chatgpt.apikey` in your `application.properties` file:
 
 ``` properties
 chatgpt:
