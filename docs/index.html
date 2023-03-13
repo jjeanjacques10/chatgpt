@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Java Client for the ChatGPT</title>
+</head>
+<header>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</header>
+
+<body>
+<h1>Java Client for the ChatGPT</h1>
+
+<p>This is a Java library that provides a simple way to integrate with the ChatGPT API. ChatGPT is an API that
+    provides
+    a conversational interface powered by GPT-3 to allow developers to build chatbots and conversational apps.</p>
+
+<h2>Installation</h2>
+
+<p>To use this library in your Java project, you can download it from Maven Central. Add the following dependency to
+    your pom.xml file:</p>
+
+<pre>
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.jjeanjacques&lt;/groupId&gt;
+            &lt;artifactId&gt;chatgpt&lt;/artifactId&gt;
+            &lt;version&gt;1.0.1&lt;/version&gt;
+        &lt;/dependency&gt;
+    </pre>
+
+<h2>Configuration</h2>
+
+<p>1. Set the property <code>chatgpt.apikey</code> in your <code>application.properties</code> file:</p>
+
+<pre>
+        chatgpt:
+          apikey: &lt;your_api_key&gt;
+    </pre>
+
+<p>2. Enable the <code>@EnableChatGpt</code> annotation in your Spring Boot application:</p>
+
+<pre>
+        &#64;SpringBootApplication
+        &#64;EnableChatGpt
+        public class Application {
+            public static void main(String[] args) {
+                SpringApplication.run(Application.class, args);
+            }
+        }
+    </pre>
+
+<h2>Usage</h2>
+
+<p>To use the Java client for the ChatGPT, you need to create an instance of the <code>ChatGpt</code> class and
+    provide
+    your ChatGPT API Key (<a
+            href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a>):
+</p>
+
+<pre>
+        ChatGpt chatGPT = new ChatGpt();
+    </pre>
+
+<h3>Example of a simple chat: </h3>
+
+<pre>
+        chatGPT.chat("Hello!").getChoices().stream()
+                        .forEach(r -&gt; System.out.println(r.getMessage().getContent()));
+        // Hello there! How can I assist you today?
+    </pre>
+
+<h3>Example of image creation</h3>
+
+<p>Here is an example of how to create an image using the ChatGPT API:</p>
+
+<pre>
+        byte[] imageBytes = chatGPT.createImage("Draw a red apple with a green stem.").getImageBytes();
+        FileOutputStream fos = new FileOutputStream("apple.png");
+        fos.write(imageBytes);
+        fos.close();
+</pre>
+
+</body>
+
+</html>

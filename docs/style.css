@@ -1,0 +1,147 @@
+/* GitHub Documentation Style */
+
+/* Set default font family and size */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Set color palette */
+:root {
+  --color-text-primary: #24292e;
+  --color-text-secondary: #586069;
+  --color-text-link: #0366d6;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f6f8fa;
+  --color-border-primary: #e1e4e8;
+}
+
+/* Set link styles */
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  border-bottom-color: var(--color-text-link);
+}
+
+/* Set headings styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* Set code block styles */
+pre {
+  font-size: 14px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+}
+
+/* Set blockquote styles */
+blockquote {
+  color: var(--color-text-secondary);
+  border-left: 4px solid var(--color-border-primary);
+  padding-left: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Set table styles */
+table {
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--color-border-primary);
+  padding: 6px 13px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* Set list styles */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+ul ul, ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: calc(0.25em - 1px);
+}
+
+/* Set image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Set miscellaneous styles */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
